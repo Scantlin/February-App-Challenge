@@ -63,7 +63,7 @@ class Ui_MainWindow(object):
 
         self.TextEdit_1 = QtWidgets.QTextEdit(self.centralwidget)
         self.TextEdit_1.setGeometry(QtCore.QRect(20, 50, 261, 100))
-        self.TextEdit_1.setStyleSheet("background-color: rgba(0,0,0,0); font: 16px \"Arial\"; color: black; border: 2px dotted black")
+        self.TextEdit_1.setStyleSheet("background-color: pink; font: 16px \"Arial\"; color: black; border: 2px solid red")
         self.TextEdit_1.setAlignment(QtCore.Qt.AlignCenter)
         self.TextEdit_1.setReadOnly(True)
 
@@ -71,7 +71,7 @@ class Ui_MainWindow(object):
 
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 300, 21))
-        self.menubar.setStyleSheet("background-color: black; color: red")
+        self.menubar.setStyleSheet("background-color: pink; color: red")
         self.menubar.setObjectName("menubar")
 
         self.menuMenu = QtWidgets.QMenu(self.menubar)
@@ -103,26 +103,27 @@ class Ui_MainWindow(object):
 
         if self.sum1 != 0 and self.sum2 !=0:
             if love_percentage <= 20 and love_percentage != 0:
+                self.TextEdit_1.setStyleSheet("background-color: pink; font: 17px \"Arial\"; color: black; border: 2px solid black")
                 self.TextEdit_1.setHtml("<i><b>A modest start to the journey of love.</b> There's room for growth and discovery. Keep nurturing the connection.</i>")
 
             elif love_percentage <= 40 and love_percentage != 0:
-                self.TextEdit_1.setStyleSheet("background-color: rgba(0,0,0,0); font: 17px \"Arial\"; color: beige; border: 2px dotted green")
+                self.TextEdit_1.setStyleSheet("background-color: pink; font: 17px \"Arial\"; color: beige; border: 2px solid yellow")
                 self.TextEdit_1.setHtml("<i><b>The spark is there,</b> and there's potential for deeper feelings. Cultivate the bond and see where it leads.</i>")
 
             elif love_percentage <= 70 and love_percentage != 0:
-                self.TextEdit_1.setStyleSheet("background-color: rgba(0,0,0,0); font: 17px \"Arial\"; color: lightblue; border: 2px dotted brown")
+                self.TextEdit_1.setStyleSheet("background-color: pink; font: 17px \"Arial\"; color: lightblue; border: 2px solid green")
                 self.TextEdit_1.setHtml("<i><b>A substantial percentage of love is evident.</b> Your connection is solid, and there's a good foundation for a meaningful relationship.</i>")
 
             elif love_percentage <= 90 and love_percentage != 0:
-                self.TextEdit_1.setStyleSheet("background-color: rgba(0,0,0,0); font: 16px \"Arial\"; color: pink; border: 2px dotted #352F44")
+                self.TextEdit_1.setStyleSheet("background-color: pink; font: 16px \"Arial\"; color: blue; border: 2px solid blue")
                 self.TextEdit_1.setHtml("<i><b>Love is flourishing!</b> Your connection is strong, and there's a profound understanding between you two. Cherish the special moments.</i>")
         
             elif love_percentage <= 99 and love_percentage != 0:
-                self.TextEdit_1.setStyleSheet("background-color: rgba(0,0,0,0); font: 17px \"Arial\"; color: yellow; border: 2px dotted #F6B17A;")
+                self.TextEdit_1.setStyleSheet("background-color: pink; font: 17px \"Arial\"; color: maroon; border: 2px solid white;")
                 self.TextEdit_1.setHtml("<i><b>An exceptional level of love!</b> Your bond is extraordinary, and it's a rare connection. Treasure the deep affection you share.</i>")
 
             elif love_percentage == 100:
-                self.TextEdit_1.setStyleSheet("background-color: rgba(0,0,0,0); font: 17px \"Arial\"; color: red; border: 2px dotted red")
+                self.TextEdit_1.setStyleSheet("background-color: pink; font: 17px \"Arial\"; color: red; border: 2px solid red")
                 self.TextEdit_1.setText("<i><b>Congratulations!</b> You've achieved a perfect score on the love scale. Your connection is unparalleled, and it's a testament to the extraordinary love you both share.</i>")
         
             else:
@@ -151,7 +152,7 @@ class Ui_MainWindow(object):
         help_icon = QtGui.QIcon(":/design/Icon.png")
         help_box.setWindowIcon(help_icon)
         help_box.setWindowTitle("How to use this program")
-        help_box.setStyleSheet("background-color: black; color: red")
+        help_box.setStyleSheet("background-color: pink; color: red")
         help_box.setText(help_text)
         help_box.exec_()
 
@@ -165,7 +166,7 @@ class Ui_MainWindow(object):
         about_box = QMessageBox()
         about_box.setIcon(QMessageBox.Information)
         about_box.setWindowTitle("About this program")
-        about_box.setStyleSheet("background-color: black; color: red")
+        about_box.setStyleSheet("background-color: pink; color: red")
         about_icon = QtGui.QIcon(":/design/Icon.png")
         about_box.setWindowIcon(about_icon)
         about_box.setText(about_text)
@@ -174,7 +175,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Percent of Love"))
-        self.label_2.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:23pt; color:#00ffff;\">PEROVE</span></p></body></html>"))
+        self.label_2.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:23pt; color:pink;\">PEROVE</span></p></body></html>"))
         self.menuMenu.setTitle(_translate("MainWindow", "Menu"))
         self.actionHelp.setText(_translate("MainWindor", "Help"))
         self.actionAbout.setText(_translate("MainWindow", "About"))
